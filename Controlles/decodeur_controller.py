@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from app.models.decodeur import Decodeur
-from app import db
+from Models.decodeur import Decodeur
+from database import db
 
 decodeur_bp = Blueprint('decodeur', __name__, url_prefix='/decodeurs')
 
