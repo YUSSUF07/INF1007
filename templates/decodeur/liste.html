@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des décodeurs</title>
+</head>
+<body>
+    <h1>Décodeurs enregistrés</h1>
+    <a href="{{ url_for('decodeur.ajouter_decodeur') }}">Ajouter un décodeur</a>
+    <ul>
+        {% for d in decodeurs %}
+            <li>
+                Modèle : {{ d.model }} - État : {{ d.etat }} - Client : {{ d.client_id }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

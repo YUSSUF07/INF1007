@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des opérations</title>
+</head>
+<body>
+    <h1>Historique des opérations</h1>
+    <a href="{{ url_for('operation.ajouter_operation') }}">Ajouter une opération</a>
+    <ul>
+        {% for op in operations %}
+            <li>
+                {{ op.date.strftime('%Y-%m-%d %H:%M') }} - {{ op.type }} - {{ op.statut }} (Décodeur ID : {{ op.decodeur_id }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

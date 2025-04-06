@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter une opération</title>
+</head>
+<body>
+    <h1>Nouvelle opération</h1>
+    <form method="POST">
+        Type d'opération : <input type="text" name="type" required><br>
+        Statut :
+        <select name="statut">
+            <option value="en attente">En attente</option>
+            <option value="exécutée">Exécutée</option>
+        </select><br>
+        ID Décodeur : <input type="number" name="decodeur_id" required><br>
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>

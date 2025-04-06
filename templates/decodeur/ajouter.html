@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un décodeur</title>
+</head>
+<body>
+    <h1>Ajouter un nouveau décodeur</h1>
+    <form method="POST">
+        Modèle : <input type="text" name="model" required><br>
+        État :
+        <select name="etat">
+            <option value="éteint">Éteint</option>
+            <option value="en marche">En marche</option>
+            <option value="redémarré">Redémarré</option>
+        </select><br>
+        ID Client : <input type="number" name="client_id" required><br>
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>

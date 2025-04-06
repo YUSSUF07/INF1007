@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tableau de bord</title></head>
+<body>
+    <h1>Bienvenue, {{ user.nom }} ({{ role }})</h1>
+
+    {% if role == 'admin' %}
+        <h2>Panel administrateur</h2>
+        <ul>
+            <li><a href="{{ url_for('admin.dashboard_admin') }}">Gérer les admins</a></li>
+            <li><a href="{{ url_for('client.liste_clients') }}">Voir les clients</a></li>
+            <li><a href="{{ url_for('decodeur.liste_decodeurs') }}">Voir les décodeurs</a></li>
+        </ul>
+    {% elif role == 'client' %}
+        <h2>Panel client</h2>
+        <ul>
+            <li><a href="{{ url_for('client.mes_decodeurs', client_id=user.id) }}">Mes décodeurs</a></li>
+        </ul>
+    {% else %}
+        <p>Rôle non reconnu</p>
+    {% endif %}
+
+    <p><a href="{{ url_for('auth.deconnexion') }}">Se déconnecter</a></p>
+</body>
+</html>

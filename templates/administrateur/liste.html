@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrateurs</title>
+</head>
+<body>
+    <h1>Liste des administrateurs</h1>
+    <a href="{{ url_for('admin.ajouter_admin') }}">Ajouter un admin</a>
+    <ul>
+        {% for a in admins %}
+            <li>{{ a.nom }} - rôle : {{ a.role }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
